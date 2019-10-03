@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+<title>Amicable Numbers</title>
+<script>
+console.log("run1");
+function submitNums() {
+     var firstNum = document.forms[0].elements[0].value; 
+     var secondNum = document.forms[0].elements[1].value; 
+     window.alert(firstNum + " & " + secondNum);
+}
+</script>
+</head>
+<body>
+ <form>
+    Enter first number:
+    <input type="text" name="firstNum"><br />
+    Enter second number:
+    <input type="text" name="secondNum">
+</form>
+<button type="button" onclick="submitNums()">Submit numbers</button>
+</body>
