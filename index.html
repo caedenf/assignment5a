@@ -3,13 +3,22 @@
 <title>Amicable Numbers</title>
 <script>
 console.log("run1");
+     window.alert(isFactor(100, 10));
+     window.alert(isFactor(20, 3));
+     window.alert(isFactor(20384, 2));
+     window.alert(isFactor(2341, 9));
 function submitNums() {
      var firstNum = document.forms[0].elements[0].value; 
      var secondNum = document.forms[0].elements[1].value; 
-     isFactor();
+     window.alert("Numbers entered: " + firstNum + " and " secondNum);
 }
  function isFactor(num, factor) {
-      //mod stuff here
+      if (num mod factor == 0) {
+          return true;    
+      }
+      else {
+          return false;    
+      }
  }
 </script>
 </head>
