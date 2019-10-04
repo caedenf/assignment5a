@@ -21,16 +21,28 @@ console.log("run7");
      var arr4 = [6, 58, 3];
      window.alert(addFactors(arr4));
      */
+     /* test code for getFactors
      var num1 = 60;
      window.alert(getFactors(num1));
      var num2 = 23;
      window.alert(getFactors(num2));
      var num3 = 1040;
      window.alert(getFactors(num3));
+     */
 function submitNums() {
-     var firstNum = document.forms[0].elements[0].value; 
-     var secondNum = document.forms[0].elements[1].value; 
+     var firstNum = parseInt(document.forms[0].elements[0].value); 
+     var secondNum = parseInt(document.forms[0].elements[1].value); 
      window.alert("Numbers entered: " + firstNum + " and " + secondNum);
+     var firstSum = addFactors(getFactors(firstNum));
+     var secondSum = addFactors(getFactors(secondNum));
+     var message = firstNum + " and " + secondNum;
+     if (firstSum == secondNum && secondSum == firstNum) {
+          message += " are amicable numbers!";
+     } else {
+          message += " are not amicable numbers.";    
+     }
+     message += "\n" + firstNum + " has the factors " + showFactors(getFactors(firstNum)) + " which sums to " + addFactors(getFactors(firstNum));
+     message += "\n" + secondNum + " has the factors " + showFactors(getFactors(secondNum)) + " which sums to " + addFactors(getFactors(secondNum));
 }
  function isFactor(num, factor) {
       if ((num % factor) == 0) {
