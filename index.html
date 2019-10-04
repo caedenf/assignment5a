@@ -2,18 +2,23 @@
 <head>
 <title>Amicable Numbers</title>
 <script>
-console.log("run5");
+console.log("run6");
      /* test code for isFactor
      window.alert(isFactor(100, 10));
      window.alert(isFactor(20, 3));
      window.alert(isFactor(20384, 2));
      window.alert(isFactor(2341, 9));
      */
+     /* test code for showFactors
      var arr = ["cat", "dog", "squirrel"];
      window.alert(showFactors(arr));
      var arr2 = [1, 2, 3];
      window.alert(showFactors(arr2));
-     showFactors
+     */
+     var arr3 = [1, 2, 3, 4];
+     window.alert(addFactors(arr3));
+     var arr4 = [6, 58, 3];
+     window.alert(addFactors(arr4));
 function submitNums() {
      var firstNum = document.forms[0].elements[0].value; 
      var secondNum = document.forms[0].elements[1].value; 
@@ -34,6 +39,14 @@ function submitNums() {
                items += array[i] + " ";
           }
           return items;
+     }
+     
+     function addFactors(array) {
+          int sum = 0;
+          for (i in array) {
+               sum += parseInt(array[i]);    
+          }
+          return sum;
      }
 </script>
 </head>
